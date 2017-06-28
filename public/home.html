@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js"
+            integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <!-- Angular (minified) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-cookies.js"></script>
+
+
+
+
+    <!--Controllers for this page/app -->
+    <script src="javascripts/controllers.js"></script>
+    <!-- Local styles -->
+
+
+
+    <style>
+        #map {
+            height:420px;
+            width:600px;
+        }
+        .infoWindowContent {
+            font-size:  14px !important;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        h2 {
+            margin-bottom:0;
+            margi
+
+
+
+    </style>
+
+    <meta charset="utf-8"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets2/css/main.css">
+
+
+</head>
+
+<body ng-app ="aitraveller" >
+
+<div class="content">
+
+
+
+<div ng-controller="chat">
+
+    <!-- input text linked to selectedName variable in the angular code which gets the input language of the user -->
+    <input ng-model = "selectedName" >
+
+    <!-- button to log out of the app  -->
+
+    <button class="button" style="vertical-align:middle" ng-click="logout()"><span> LOG OUT </span></button>
+
+    <p>
+
+
+
+    </p>
+
+    <!-- input text link to my text variable to the text inputted by the user to interact with the chabot  -->
+    <input ng-model = "text" >
+
+    <!-- button to send the message connected to my insert() function in angular js -->
+    <button class="button" style="vertical-align:middle" ng-click = "insert()"><span> SEND </span></button>
+    <!-- button to reload the entire page -->
+    <button class="button" style="vertical-align:middle" ng-click = "reloading()"><span> RELOAD </span></button>
+
+    <!-- displaing the entire conversation  -->
+
+    <div >
+        <p ng-repeat="message in rawRecords"> {{message.translate}}</p>
+    </div>
+
+    <!-- displaying the map with the location in case a query with a city and type of place was entered by the user -->
+
+    <div ng-if="(latitude != 0 && latitude.length != 0 )  || ( longitude != 0 && longitude.length != 0)  " >
+
+        <div ng-controller="MapCtrl">
+
+
+            <div id="map"></div>
+            <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+                <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<script type= "text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHQPLozkgjgoxjcaxf_DojMJSDI5jCbDE&libraries=places"></script>
+
+
+
+</body>
+</html>

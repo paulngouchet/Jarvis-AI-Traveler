@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js"
+            integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <!-- Angular (minified) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-cookies.js"></script>
+
+
+
+
+    <!--Controllers for this page/app -->
+    <script src="javascripts/controllers.js"></script>
+    <!-- Local styles -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+
+
+
+</head>
+
+<body ng-app ="aitraveller" >
+
+
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-phone"></i>AiTraveller</a>
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active" role="presentation">
+
+
+
+                </li>
+                <li role="presentation">
+
+                        <div ng-controller = "facebook">
+                            <!-- Facebook logging button  -->
+                            <button  ng-click="facebookLog()" >FACEBOOK LOG IN</button>
+
+                        </div>
+                </li>
+                <li role="presentation">
+                    <a href="#"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron hero" style="background-image:url(&quot;assets/img/ai_0.jpg&quot;);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-push-7 phone-preview">
+                <div class="iphone-mockup">
+                    <div class="screen" style="background-image:url(&quot;assets/img/main-qimg-3535b34578b6bc904bd20d3405bc4971.png&quot;);"></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-pull-3 get-it">
+                <h1>Discover New Horizons</h1>
+                <p>Jarvis, Your Personal Traveller Assistant. </p>
+                <p> </p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="testimonials">
+    <h2 class="text-center">People Love It!</h2>
+    <blockquote>
+        <p>With this, you will never feel alone anymore when travellling. </p>
+        <footer>Boston University Tech </footer>
+    </blockquote>
+</section>
+<section class="features" style="background-color:rgba(24,22,21,0.99);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Fantastic Features</h2>
+                <p>Research all the places you need during your trip. You can find everything. Nightclubs, restaurants . Just look it up </p>
+            </div>
+            <div class="col-md-6">
+                <div class="row icon-features">
+                    <div class="col-xs-4 icon-feature"><i class="fa fa-glass" style="font-size:60px;"></i>
+                        <p>Drink </p>
+                    </div>
+                    <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-music" style="font-size:60px;"></i>
+                        <p>Dance </p>
+                    </div>
+                    <div class="col-xs-4 icon-feature"><i class="fa fa-search" style="font-size:60px;"></i>
+                        <p>Explore </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h5>Ngouchet Inc © 2017</h5></div>
+            <div class="col-sm-6 social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
