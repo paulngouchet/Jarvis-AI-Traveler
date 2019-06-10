@@ -1,8 +1,2 @@
-# BUCS MEAN
-this is the code that we looked during our faculty lecture on dogfooding. Note that to run this yourself you'll need to install the various dependencies in node_modules; they can be installed via `npm install`.
-## Passport
-This branch is set up for local auth using Passport.js
-## Running
-To run, first clone the repo and install the Node componenets. Start mongoDB with `mongod&`, then run the app with `npm start`.
-## Slides
-The original slide set accompanying the talk are in the `docs` folder in PDF.
+# Jarvis AI Traveler
+Web application built using MEAN stack. MongoDB ExpressJS AngularJS NodeJs. This web app has a chatbot built using api.ai and Google Maps embedded into it which role is to answer any questions a traveler might have when he goes to another country or city. As an example the traveler might ask Jarvis what are some good restaurants in boston and the AI assistant will display the restaurants on a Google Map.
