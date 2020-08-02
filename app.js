@@ -10,60 +10,43 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const passport = require('passport')
-
 //flash is used with passport to pop up messages
 const flash = require('connect-flash')
 //and flash requires session. We'll also want passport-session.
-
-
 //var routes = require('./routes/index');
 const api = require('./routes/api')
-
 const artificial = require('./routes/coreAPI')
 const authFacebook = require('./routes/authFacebook')
-
-
 const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 //Pass anything other than mounted routes to Angular
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'this is not a secret' }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-
 app.get('/authenticated', function(req, res){
     res.sendFile('public/home.html', { root: __dirname })
 })
-
-
-
 //Back end APIis sered on the /api route
 app.use('/api', api);
 app.use('/auth', authFacebook)
 app.use('/smart', artificial)
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error('Not Found')
     err.status = 404;
   next(err);
 });
-
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development' || true) {
@@ -75,7 +58,6 @@ if (app.get('env') === 'development' || true) {
     });
   });
 }
-
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
@@ -85,6 +67,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;
