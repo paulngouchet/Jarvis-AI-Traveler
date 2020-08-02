@@ -1,7 +1,5 @@
 let app = angular.module('aitraveller', ['ngRoute', 'ngCookies'])
-
 // Main controller for the entire app
-
 app.controller('chat', function($scope, $http, $timeout, $window) {
     $scope.languages = ["English", "French" , "Chinese"];    // all the different language that the app can supports for translation
     $scope.selectedName = "English";    // Variable linked to the frontend that allows the user to select the language he wants the conversational ai to answer with.
